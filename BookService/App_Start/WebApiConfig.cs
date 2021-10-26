@@ -1,6 +1,7 @@
 ﻿using System.Web.Http;
 using BookService.DbContext;
 using BookService.DependencyInjection;
+using BookService.DependencyInjection.DependencyResolver;
 using BookService.Models;
 using Unity;
 using Unity.Lifetime;
@@ -12,10 +13,8 @@ namespace BookService
         public static void Register(HttpConfiguration config)
         {
             // Web API configuration and services
-            var container = new UnityContainer();
-            container.RegisterType<BookContext>(new HierarchicalLifetimeManager());
-            config.DependencyResolver = new UnityResolver(container);
-
+            ContainerFactory.Build(config);
+            
             // Web API routes
             config.MapHttpAttributeRoutes();
 

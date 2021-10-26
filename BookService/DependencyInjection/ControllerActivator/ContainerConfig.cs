@@ -3,7 +3,7 @@ using System.Web.Http.Dispatcher;
 using BookService.DbContext;
 using Unity;
 
-namespace BookService.DependencyInjection
+namespace BookService.DependencyInjection.ControllerActivator
 {
     public static class ContainerConfig {
         public static void Config() {

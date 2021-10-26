@@ -4,7 +4,7 @@ using System.Web.Http.Controllers;
 using System.Web.Http.Dispatcher;
 using Unity;
 
-namespace BookService.DependencyInjection
+namespace BookService.DependencyInjection.ControllerActivator
 {
     public sealed class UnityHttpControllerActivator : IHttpControllerActivator
     {

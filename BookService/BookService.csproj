@@ -74,9 +74,10 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AuthorsController.cs" />
     <Compile Include="DbContext\BookContext.cs" />
-    <Compile Include="DependencyInjection\ContainerConfig.cs" />
-    <Compile Include="DependencyInjection\UnityHttpControllerActivator.cs" />
-    <Compile Include="DependencyInjection\UnityResolver.cs" />
+    <Compile Include="DependencyInjection\ControllerActivator\ContainerConfig.cs" />
+    <Compile Include="DependencyInjection\ControllerActivator\UnityHttpControllerActivator.cs" />
+    <Compile Include="DependencyInjection\DependencyResolver\ContainerFactory.cs" />
+    <Compile Include="DependencyInjection\DependencyResolver\UnityResolver.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
