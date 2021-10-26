@@ -1,14 +1,12 @@
 ﻿using System.Web.Http;
 using System.Web.Http.Dispatcher;
-using BookService.DbContext;
-using Unity;
 
 namespace BookService.DependencyInjection.ControllerActivator
 {
     public static class ContainerConfig {
-        public static void Config() {
-            var container = new UnityContainer();
-            MapTypes(container);
+        public static void Config()
+        {
+            var container = ContainerFactory.Build();
 
             // Set resolver to MVC.
             // var controllerActivator = new UnityControllerActivator(container);
@@ -21,10 +19,6 @@ namespace BookService.DependencyInjection.ControllerActivator
             // Set resolver to SignalR.
             // var hubActivator = new UnityHubActivator(container);
             // GlobalHost.DependencyResolver.Register(typeof (IHubActivator), () => hubActivator);
-        }
-
-        private static void MapTypes(IUnityContainer container) {
-            container.RegisterType<BookContext>();
         }
     }
 }

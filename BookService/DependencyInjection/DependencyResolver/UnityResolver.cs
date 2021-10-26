@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Web.Http.Dependencies;
 using Unity;
 
-namespace BookService.DependencyInjection
+namespace BookService.DependencyInjection.DependencyResolver
 {
     public class UnityResolver : IDependencyResolver
     {

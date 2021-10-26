@@ -12,8 +12,11 @@ namespace BookService
     {
         public static void Register(HttpConfiguration config)
         {
+            //Add unity container as IDependencyResolver implementation
+            var container = ContainerFactory.Build();
+            config.DependencyResolver = new UnityResolver(container);
+                
             // Web API configuration and services
-            ContainerFactory.Build(config);
             
             // Web API routes
             config.MapHttpAttributeRoutes();

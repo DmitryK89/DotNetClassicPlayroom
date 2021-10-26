@@ -1,20 +1,19 @@
-using System.Web.Http;
 using BookService.DbContext;
 using Unity;
 using Unity.Lifetime;
 
-namespace BookService.DependencyInjection.DependencyResolver
+namespace BookService.DependencyInjection
 {
     public static class ContainerFactory
     {
-        public static void Build(HttpConfiguration config)
+        public static IUnityContainer Build()
         {
             var container = new UnityContainer();
             AddServices(container);
-            config.DependencyResolver = new UnityResolver(container);
+            return container;
         }
 
-        private static void AddServices(UnityContainer container)
+        private static void AddServices(IUnityContainer container)
         {
             container.RegisterType<BookContext>(new HierarchicalLifetimeManager());
         }
