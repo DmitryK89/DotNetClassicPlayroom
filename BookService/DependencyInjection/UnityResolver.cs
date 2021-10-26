@@ -22,6 +22,7 @@ namespace BookService.DependencyInjection
             }
             catch (ResolutionFailedException exception)
             {
+                //return null;
                 throw new InvalidOperationException($"Unable to resolve service for type {serviceType}.", exception);
             }
         }
@@ -34,6 +35,7 @@ namespace BookService.DependencyInjection
             }
             catch (ResolutionFailedException exception)
             {
+                return new List<object>();
                 throw new InvalidOperationException($"Unable to resolve service for type {serviceType}.", exception);
             }
         }

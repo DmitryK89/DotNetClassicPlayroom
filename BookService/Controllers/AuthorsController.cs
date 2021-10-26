@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Data.Entity;
+﻿using System.Data.Entity;
 using System.Data.Entity.Infrastructure;
 using System.Linq;
 using System.Net;
-using System.Net.Http;
 using System.Web.Http;
 using System.Web.Http.Description;
 using BookService.DbContext;
@@ -15,11 +11,11 @@ namespace BookService.Controllers
 {
     public class AuthorsController : ApiController
     {
-        private BookContext _context;
+        private readonly BookContext _context;
 
-        public AuthorsController()
+        public AuthorsController(BookContext context)
         {
-            _context = new BookContext();
+            _context = context;
         }
 
         // GET: api/Authors

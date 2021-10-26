@@ -12,6 +12,9 @@ namespace BookService
         public static void Register(HttpConfiguration config)
         {
             // Web API configuration and services
+            var container = new UnityContainer();
+            container.RegisterType<BookContext>(new HierarchicalLifetimeManager());
+            config.DependencyResolver = new UnityResolver(container);
 
             // Web API routes
             config.MapHttpAttributeRoutes();

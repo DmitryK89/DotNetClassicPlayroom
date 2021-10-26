@@ -3,15 +3,7 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
 using System.Web.Http;
-using BookService.Controllers;
-using BookService.DbContext;
 using BookService.DependencyInjection;
-using Castle.Facilities.AspNet.WebApi;
-using Castle.MicroKernel.Registration;
-using Castle.Windsor;
-using Unity;
-using Unity.Lifetime;
-using Unity.WebApi;
 
 namespace BookService
 {
@@ -19,6 +11,8 @@ namespace BookService
     {
         void Application_Start(object sender, EventArgs e)
         {
+            //ContainerConfig.Config();
+
             // Code that runs on application startup
             AreaRegistration.RegisterAllAreas();
             GlobalConfiguration.Configure(WebApiConfig.Register);
