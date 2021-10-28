@@ -5,7 +5,7 @@ using System.Net;
 using System.Web.Http;
 using System.Web.Http.Description;
 using BookService.DbContext;
-using BookService.Models;
+using BookService.Models.Entities;
 
 namespace BookService.Controllers
 {

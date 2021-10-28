@@ -6,10 +6,13 @@ using System.Data.Entity.Infrastructure;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
+using System.Threading.Tasks;
 using System.Web.Http;
 using System.Web.Http.Description;
 using BookService.DbContext;
 using BookService.Models;
+using BookService.Models.Dto;
+using BookService.Models.Entities;
 
 namespace BookService.Controllers
 {
@@ -18,16 +21,34 @@ namespace BookService.Controllers
         private BookContext db = new BookContext();
 
         // GET: api/Books
-        public IQueryable<Book> GetBooks()
+        public IQueryable<BookDto> GetBooks()
         {
-            return db.Books.Include(b=>b.Author);
+            return db.Books
+                .Include(b=>b.Author)
+                .Select(b => new BookDto
+                {
+                    Id = b.Id,
+                    Title = b.Title,
+                    AuthorName = b.Author.Name
+                });
         }
 
         // GET: api/Books/5
         [ResponseType(typeof(Book))]
-        public IHttpActionResult GetBook(int id)
+        public async Task<IHttpActionResult> GetBook(int id)
         {
-            Book book = db.Books.Find(id);
+            var book = await db.Books
+                .Select(b=>new BookDetailDto
+                {
+                    Id = b.Id,
+                    Title = b.Title,
+                    Year = b.Year,
+                    Price = b.Price,
+                    AuthorName = b.Author.Name,
+                    Genre = b.Genre
+                })
+                .FirstOrDefaultAsync(b => b.Id == id);
+                
             if (book == null)
             {
                 return NotFound();

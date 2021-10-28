@@ -84,8 +84,11 @@
       <DependentUpon>202110240956434_Initial.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
-    <Compile Include="Models\Author.cs" />
-    <Compile Include="Models\Book.cs" />
+    <Compile Include="Models\Dto\AuthorDto.cs" />
+    <Compile Include="Models\Dto\BookDetailDto.cs" />
+    <Compile Include="Models\Dto\BookDto.cs" />
+    <Compile Include="Models\Entities\Author.cs" />
+    <Compile Include="Models\Entities\Book.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
