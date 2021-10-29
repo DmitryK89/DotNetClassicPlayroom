@@ -1,11 +1,8 @@
 ﻿using System.Linq;
 using System.Web.Http;
-using BookService.DbContext;
 using BookService.DependencyInjection;
 using BookService.DependencyInjection.DependencyResolver;
-using BookService.Models;
-using Unity;
-using Unity.Lifetime;
+using Swashbuckle.Application;
 
 namespace BookService
 {
@@ -13,10 +10,8 @@ namespace BookService
     {
         public static void Register(HttpConfiguration config)
         {
-            //Add unity container as IDependencyResolver implementation
-            var container = ContainerFactory.Build();
-            config.DependencyResolver = new UnityResolver(container);
-                
+            ConfigureDependencyInjection(config);
+
             // Web API configuration and services
             
             // Web API routes
@@ -28,9 +23,28 @@ namespace BookService
                 defaults: new { id = RouteParameter.Optional }
             );                      
 
-            //Remove Xml to set Json by default
-            var appXmlType = config.Formatters.XmlFormatter.SupportedMediaTypes.FirstOrDefault(t => t.MediaType == "application/xml");
-                config.Formatters.XmlFormatter.SupportedMediaTypes.Remove(appXmlType);
+            SetJsonByDefault(config);
+            ConfigureSwagger(config);
+        }
+
+        private static void SetJsonByDefault(HttpConfiguration config)
+        {
+            var appXmlType =
+                config.Formatters.XmlFormatter.SupportedMediaTypes.FirstOrDefault(t => t.MediaType == "application/xml");
+            config.Formatters.XmlFormatter.SupportedMediaTypes.Remove(appXmlType);
+        }
+
+        private static void ConfigureDependencyInjection(HttpConfiguration config)
+        {
+            var container = ContainerFactory.Build();
+            config.DependencyResolver = new UnityResolver(container);
+        }
+
+        private static void ConfigureSwagger(HttpConfiguration config)
+        {
+            config
+                .EnableSwagger(c => c.SingleApiVersion("v1", "A title for your API"))
+                .EnableSwaggerUi();
         }
     }
 }

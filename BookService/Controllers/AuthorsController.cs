@@ -18,13 +18,20 @@ namespace BookService.Controllers
             _context = context;
         }
 
-        // GET: api/Authors
+        /// <summary>
+        /// GET: api/Authors
+        /// </summary>
+        /// <returns></returns>
         public IQueryable<Author> GetAuthors()
         {
             return _context.Authors;
         }
 
-        // GET: api/Authors/5
+        /// <summary>
+        /// GET: api/Authors/5
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         [ResponseType(typeof(Author))]
         public IHttpActionResult GetAuthor(int id)
         {
