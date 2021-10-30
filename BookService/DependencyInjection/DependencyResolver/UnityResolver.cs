@@ -20,10 +20,9 @@ namespace BookService.DependencyInjection.DependencyResolver
             {
                 return _unityContainer.Resolve(serviceType);
             }
-            catch (ResolutionFailedException exception)
+            catch
             {
                 return null;
-                //throw new InvalidOperationException($"Unable to resolve service for type {serviceType}.", exception);
             }
         }
 
@@ -33,7 +32,7 @@ namespace BookService.DependencyInjection.DependencyResolver
             {
                 return _unityContainer.ResolveAll(serviceType);
             }
-            catch (ResolutionFailedException exception)
+            catch
             {
                 return new List<object>();
                 //throw new InvalidOperationException($"Unable to resolve service for type {serviceType}.", exception);
