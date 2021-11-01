@@ -87,7 +87,7 @@ namespace BookService.Controllers
         /// <summary>
         /// GET: api/Books/fantasy
         /// </summary>
-        /// <param name="id"></param>
+        /// <param name="genre"></param>
         /// <returns></returns>
         [Route("{genre}")]
         [ResponseType(typeof(Book))]
@@ -98,11 +98,11 @@ namespace BookService.Controllers
                 .Select(AsBookDto());
             return book;
         }
-        
+
         /// <summary>
         /// GET: /api/authors/id/books
         /// </summary>
-        /// <param name="id"></param>
+        /// <param name="authorId"></param>
         /// <returns></returns>
         [Route("~/api/authors/{authorId:int}/books")]
         [ResponseType(typeof(Book))]

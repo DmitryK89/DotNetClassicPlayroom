@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31229.75
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductsApp", "ProductsApp\ProductsApp.csproj", "{F19563C9-D051-4477-9B16-182AD336AB3A}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookService", "BookService\BookService.csproj", "{6CE5AFA2-9B89-4F05-9BC2-0D8961B7989E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductService", "ProductService\ProductService.csproj", "{33BA49B3-1733-4C6F-ACBD-760F269803D1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,14 +13,14 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{F19563C9-D051-4477-9B16-182AD336AB3A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F19563C9-D051-4477-9B16-182AD336AB3A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F19563C9-D051-4477-9B16-182AD336AB3A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F19563C9-D051-4477-9B16-182AD336AB3A}.Release|Any CPU.Build.0 = Release|Any CPU
 		{6CE5AFA2-9B89-4F05-9BC2-0D8961B7989E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{6CE5AFA2-9B89-4F05-9BC2-0D8961B7989E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6CE5AFA2-9B89-4F05-9BC2-0D8961B7989E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6CE5AFA2-9B89-4F05-9BC2-0D8961B7989E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{33BA49B3-1733-4C6F-ACBD-760F269803D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{33BA49B3-1733-4C6F-ACBD-760F269803D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{33BA49B3-1733-4C6F-ACBD-760F269803D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{33BA49B3-1733-4C6F-ACBD-760F269803D1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
