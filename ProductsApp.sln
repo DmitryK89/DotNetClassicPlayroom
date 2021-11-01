@@ -5,7 +5,9 @@ VisualStudioVersion = 16.0.31229.75
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookService", "BookService\BookService.csproj", "{6CE5AFA2-9B89-4F05-9BC2-0D8961B7989E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductService", "ProductService\ProductService.csproj", "{33BA49B3-1733-4C6F-ACBD-760F269803D1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductService", "ProductService\ProductService.csproj", "{F0DED979-0B81-49F9-A2D5-56240812E5B2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductServiceOdata", "ProductServiceOdata\ProductServiceOdata.csproj", "{33BA49B3-1733-4C6F-ACBD-760F269803D1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,6 +19,10 @@ Global
 		{6CE5AFA2-9B89-4F05-9BC2-0D8961B7989E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6CE5AFA2-9B89-4F05-9BC2-0D8961B7989E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6CE5AFA2-9B89-4F05-9BC2-0D8961B7989E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F0DED979-0B81-49F9-A2D5-56240812E5B2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F0DED979-0B81-49F9-A2D5-56240812E5B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F0DED979-0B81-49F9-A2D5-56240812E5B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F0DED979-0B81-49F9-A2D5-56240812E5B2}.Release|Any CPU.Build.0 = Release|Any CPU
 		{33BA49B3-1733-4C6F-ACBD-760F269803D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{33BA49B3-1733-4C6F-ACBD-760F269803D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{33BA49B3-1733-4C6F-ACBD-760F269803D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
