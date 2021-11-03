@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductService", "ProductSe
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductServiceOdata", "ProductServiceOdata\ProductServiceOdata.csproj", "{33BA49B3-1733-4C6F-ACBD-760F269803D1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductServiceClient", "ProductServiceClient\ProductServiceClient.csproj", "{3106C522-243F-43F8-BCEE-2CA6105B695A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{33BA49B3-1733-4C6F-ACBD-760F269803D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{33BA49B3-1733-4C6F-ACBD-760F269803D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{33BA49B3-1733-4C6F-ACBD-760F269803D1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3106C522-243F-43F8-BCEE-2CA6105B695A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3106C522-243F-43F8-BCEE-2CA6105B695A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3106C522-243F-43F8-BCEE-2CA6105B695A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3106C522-243F-43F8-BCEE-2CA6105B695A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
